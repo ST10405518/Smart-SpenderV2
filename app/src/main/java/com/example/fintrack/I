@@ -1,0 +1,19 @@
+```xml file="app/src/main/res/drawable/SmartSpender_logo.xml"
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,100m-80,0a80,80 0,1 1,160 0a80,80 0,1 1,-160 0" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M100,100m-60,0a60,60 0,1 1,120 0a60,60 0,1 1,-120 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,70L130,130" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M130,70L70,130" />
+</vector>
