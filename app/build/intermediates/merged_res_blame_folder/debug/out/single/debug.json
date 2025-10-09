@@ -1,0 +1,314 @@
+[
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_transport.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/transport.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_notification.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/notification.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_google_button_background_material.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/google_button_background_material.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_security.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_security.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_profile_placeholder.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_profile_placeholder.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_add_wallet.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_add_wallet.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_login.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_medal.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_medal.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_button_outline_background.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/button_outline_background.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_edit_wallet.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_edit_wallet.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_entertainment.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_entertainment.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_groceries.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/groceries.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_statistics.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_statistics.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_mastercard_logo.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/mastercard_logo.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_main.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_camera.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_camera.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_security.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_security.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_add_spending.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_add_spending.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_flame.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_flame.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/font_poppins_bold.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/font/poppins_bold.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_card_background.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/card_background.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/color_bottom_nav_color.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/color/bottom_nav_color.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_button_outline_black.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/button_outline_black.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_add_circle.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_add_circle.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_logo.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/logo.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_home.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_food.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_food.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_splash.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_bg_network_pattern.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/bg_network_pattern.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/font_poppins_regular_font.ttf.flat",
+        "source": "com.example.SmartSpender.app-main-56:/font/poppins_regular_font.ttf"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_achievement.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_achievement.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_item_transaction.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/item_transaction.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_trophy.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_trophy.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_food.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/food.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_notification.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_notification.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_launcher_foreground.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_entertainment.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/entertainment.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_notification.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_notification.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/font_poppins_regular.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/font/poppins_regular.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_back.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_dialog_set_budget.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/dialog_set_budget.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_dialog_add_funds.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/dialog_add_funds.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_gamification_gradient.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/gamification_gradient.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/font_poppins_medium.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/font/poppins_medium.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_dialog_view_photo.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/dialog_view_photo.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_savings.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/savings.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_edit_text_background.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/edit_text_background.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_row_background.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/row_background.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_launcher_foreground_background.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_launcher_foreground_background.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/font_poppins_medium_font.ttf.flat",
+        "source": "com.example.SmartSpender.app-main-56:/font/poppins_medium_font.ttf"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_circle_background.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/circle_background.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_stats.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_stats.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_category.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_category.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_button_background.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/button_background.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_google_logo.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_google_logo.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_money.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/money.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_profile.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_settings.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_other.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/other.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/menu_main_menu.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/menu/main_menu.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_expense_report.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_expense_report.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_movies.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/movies.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/font_poppins_bold_font.ttf.flat",
+        "source": "com.example.SmartSpender.app-main-56:/font/poppins_bold_font.ttf"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_item_notification.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/item_notification.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_utilities.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/utilities.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_wallet.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_wallet.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_button_white_background.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/button_white_background.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_arrow_right_white.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_arrow_right_white.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/layout_activity_signup.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_savings.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_savings.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_achivement_background.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/achivement_background.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_expense.png.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/expense.png"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_menu.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_menu.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_rank_badge.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/rank_badge.xml"
+    },
+    {
+        "merged": "com.example.SmartSpender.app-merged_res-54:/drawable_ic_add.xml.flat",
+        "source": "com.example.SmartSpender.app-main-56:/drawable/ic_add.xml"
+    }
+]

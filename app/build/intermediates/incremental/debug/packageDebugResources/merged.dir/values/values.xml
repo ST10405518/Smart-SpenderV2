@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="expense_categories">
+        <item>Food</item>
+        <item>Movies</item>
+        <item>Entertainment</item>
+        <item>Groceries</item>
+        <item>Transport</item>
+        <item>Savings</item>
+        <item>Utilities</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Afrikaans</item>
+        <item>Zulu</item>
+        <item>Xhosa</item>
+    </string-array>
+    <string-array name="months">
+        <item>Month</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="years">
+        <item>Year</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+    </string-array>
+    <color name="black">#000000</color>
+    <color name="colorAccent">#4CAF50</color>
+    <color name="colorBackground">#f9f9f9</color>
+    <color name="colorButtonBackground">#000000</color>
+    <color name="colorButtonOutline">#FF0000</color>
+    <color name="colorButtonOutlineText">#FF0000</color>
+    <color name="colorButtonText">#FFFFFF</color>
+    <color name="colorCard">#000000</color>
+    <color name="colorCardText">#FFFFFF</color>
+    <color name="colorError">#FF0000</color>
+    <color name="colorExpense">#FF0000</color>
+    <color name="colorFabBackground">#000000</color>
+    <color name="colorFabIcon">#FFFFFF</color>
+    <color name="colorHintText">#757575</color>
+    <color name="colorIcon">#000000</color>
+    <color name="colorIconBackground">#F5F5F5</color>
+    <color name="colorIncome">#4CAF50</color>
+    <color name="colorPrimary">#8BC34A</color>
+    <color name="colorPrimaryDark">#689F38</color>
+    <color name="colorSecondary">#03DAC5</color>
+    <color name="colorText">#000000</color>
+    <color name="colorTextPrimary">#000000</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="green">#43A047</color>
+    <color name="ic_launcher_background">#000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red">#E53935</color>
+    <color name="selected_nav_item">#000000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="textColor">#8D5504</color>
+    <color name="unselected_nav_item">#757575</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FDD835</color>
+    <string name="add">Add</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="add_icon">Add Icon</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="add_wallet">Add Wallet</string>
+    <string name="added_fund">You Added fund R%1$s</string>
+    <string name="amount">Amount</string>
+    <string name="app_name">SmartSpender</string>
+    <string name="appname">DarkModeExample</string>
+    <string name="balance">Balance</string>
+    <string name="card_number">Card Number</string>
+    <string name="cvc">CVC</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="delete">Delete</string>
+    <string name="discard">Discard</string>
+    <string name="edit">Edit</string>
+    <string name="edit_wallet">Edit Wallet</string>
+    <string name="email">Email</string>
+    <string name="expense_category">Expense Category</string>
+    <string name="expense_name">Expense Name</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="full_name">Full Name</string>
+    <string name="gcm_defaultSenderId" translatable="false">46478644171</string>
+    <string name="get_started">Get Started</string>
+    <string name="google_api_key" translatable="false">AIzaSyCLOIjzQPvR8VXKF3Va_eb4WE2gq63W8b0</string>
+    <string name="google_app_id" translatable="false">1:46478644171:android:c93a0fa6ec0b4586041c4e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCLOIjzQPvR8VXKF3Va_eb4WE2gq63W8b0</string>
+    <string name="google_storage_bucket" translatable="false">smartspenderv2.firebasestorage.app</string>
+    <string name="history">History</string>
+    <string name="login">Log In</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="notification">Notification</string>
+    <string name="password">Password</string>
+    <string name="project_id" translatable="false">smartspenderv2</string>
+    <string name="signup">Sign Up</string>
+    <string name="spending_limit_reached">You have reached R%1$s spending.</string>
+    <string name="spendings">Spendings</string>
+    <string name="statistics">Statistics</string>
+    <string name="terms_policy">By continuing, you agree to Terms of Use and Privacy Policy.</string>
+    <string name="title_add">Add</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_stats">Statistics</string>
+    <string name="title_wallet">Wallet</string>
+    <string name="today">Today</string>
+    <string name="total_spent">Total spent</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="your_card_details">Your Card Details</string>
+    <string name="zip">Zip</string>
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">?attr/colorPrimaryDark</item>
+    </style>
+    <style name="Base.Theme.SmartSpender" parent="Theme.Material3.DayNight">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+    <style name="Theme.SmartSpender" parent="Base.Theme.SmartSpender"/>
+    <style name="Theme.SmartSpender.SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_launcher_foreground</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

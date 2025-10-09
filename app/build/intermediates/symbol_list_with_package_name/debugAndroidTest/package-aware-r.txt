@@ -1,0 +1,3 @@
+com.example.SmartSpender.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
