@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Dark theme colors -->
+
+    <color name="colorPrimary">#81C784</color>
+    <color name="colorPrimaryDark">#1B5E20</color>
+    <color name="colorAccent">#A5D6A7</color>
+    <color name="colorBackground">#121212</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorTextSecondary">#B0B0B0</color>
+    <color name="colorExpense">#FF5252</color>
+    <color name="colorIncome">#69F0AE</color>
+    <color name="colorCard">#1E1E1E</color>
+    <color name="colorCardText">#FFFFFF</color>
+    <color name="colorIcon">#FFFFFF</color>
+    <color name="colorIconBackground">#2D2D2D</color>
+    <color name="colorButtonText">#000000</color>
+    <color name="colorButtonBackground">#BB86FC</color>
+    <color name="colorButtonOutline">#CF6679</color>
+    <color name="colorButtonOutlineText">#CF6679</color>
+    <color name="black">#FFFFFF</color>
+    <color name="white">#000000</color>
+    <color name="selected_nav_item">#FFFFFF</color>
+    <color name="unselected_nav_item">#B0B0B0</color>
+
+
+    <!-- Override for dark mode -->
+    <color name="colorHintText">#B0B0B0</color>
+    <color name="colorError">#FF5252</color>
+
+
+    <color name="colorFabBackground">#000000</color>
+    <color name="colorFabIcon">#FFFFFF</color>
+
+    <color name="colorTextPrimary">#000000</color>
+
+    <color name="colorSecondary">#03DAC5</color>
+</resources>

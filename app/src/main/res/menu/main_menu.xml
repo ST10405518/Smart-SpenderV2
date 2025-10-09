@@ -9,6 +9,11 @@
     <item
         android:id="@+id/menu_expense_report"
         android:title="Expense Report" />
+
+    <item
+        android:id="@+id/menu_dark_mode"
+        android:title="Dark Mode" />
+
     <item
         android:id="@+id/menu_logout"
         android:title="Logout" />

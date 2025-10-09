@@ -1,11 +1,13 @@
 package com.example.SmartSpender
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.SmartSpender.adapters.TransactionAdapter
@@ -35,16 +37,20 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private lateinit var dbHelper: DatabaseHelper
     private lateinit var transactionAdapter: TransactionAdapter
     private var userId: Int = 0
-    private var budget: Double = 0.0 // Default budget set to 0
+    private var budget: Double = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Apply dark mode before setting content view
+        applyDarkMode()
+
         setContentView(R.layout.activity_main)
 
         // Get user ID from shared preferences
         val sharedPref = getSharedPreferences("SmartSpenderPrefs", MODE_PRIVATE)
         userId = sharedPref.getInt("userId", 0)
-        budget = sharedPref.getFloat("userBudget", 0.0f).toDouble() // Default to 0
+        budget = sharedPref.getFloat("userBudget", 0.0f).toDouble()
 
         if (userId == 0) {
             // User not logged in, redirect to login
@@ -88,6 +94,12 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             // Show menu options
             val popupMenu = PopupMenu(this, menuButton)
             popupMenu.menuInflater.inflate(R.menu.main_menu, popupMenu.menu)
+
+            // Update dark mode menu item title based on current state
+            val darkModeItem = popupMenu.menu.findItem(R.id.menu_dark_mode)
+            val isDarkMode = isDarkModeEnabled()
+            darkModeItem.title = if (isDarkMode) "Light Mode" else "Dark Mode"
+
             popupMenu.setOnMenuItemClickListener { item ->
                 when (item.itemId) {
                     R.id.menu_profile -> {
@@ -102,6 +114,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                     }
                     R.id.menu_expense_report -> {
                         startActivity(Intent(this, ExpenseReportActivity::class.java))
+                        true
+                    }
+                    R.id.menu_dark_mode -> {
+                        // Toggle dark mode
+                        toggleDarkMode()
                         true
                     }
                     R.id.menu_logout -> {
@@ -128,6 +145,44 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         // Load data
         loadData()
+    }
+
+    private fun applyDarkMode() {
+        val sharedPreferences = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
+        val nightMode = sharedPreferences.getBoolean("nightMode", false)
+
+        if (nightMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
+    }
+
+    private fun toggleDarkMode() {
+        val sharedPreferences = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val isCurrentlyDarkMode = isDarkModeEnabled()
+
+        if (isCurrentlyDarkMode) {
+            // Switch to light mode
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            editor.putBoolean("nightMode", false)
+            Toast.makeText(this, "Light Mode Enabled", Toast.LENGTH_SHORT).show()
+        } else {
+            // Switch to dark mode
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            editor.putBoolean("nightMode", true)
+            Toast.makeText(this, "Dark Mode Enabled", Toast.LENGTH_SHORT).show()
+        }
+        editor.apply()
+
+        // Restart activity to apply theme changes properly
+        recreate()
+    }
+
+    private fun isDarkModeEnabled(): Boolean {
+        val sharedPreferences = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
+        return sharedPreferences.getBoolean("nightMode", false)
     }
 
     private fun showBudgetDialog() {

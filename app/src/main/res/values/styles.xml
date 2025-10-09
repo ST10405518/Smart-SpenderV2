@@ -1,16 +1,22 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Base application theme with dark mode support -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
+
+        <!-- Material 3 specific colors -->
+        <item name="android:statusBarColor">?attr/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">?attr/colorPrimaryDark</item>
     </style>
+
+
 
     <!-- Splash Screen Theme -->
     <style name="Theme.SmartSpender.SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/ic_launcher_foreground</item> <!-- Replace with your splash screen background -->
+        <item name="android:windowBackground">@drawable/ic_launcher_foreground</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
     </style>

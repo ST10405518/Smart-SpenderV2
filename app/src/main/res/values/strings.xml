@@ -1,4 +1,8 @@
 <resources>
+
+    <string name="appname">DarkModeExample</string>
+
+
     <string name="app_name">SmartSpender</string>
     <string name="title_home">Home</string>
     <string name="title_stats">Statistics</string>

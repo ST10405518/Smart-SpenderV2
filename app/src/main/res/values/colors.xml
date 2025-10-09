@@ -18,7 +18,34 @@
     <color name="colorButtonOutlineText">#FF0000</color>
     <color name="black">#000000</color>
 
+
     
     <color name="selected_nav_item">#000000</color>
     <color name="unselected_nav_item">#757575</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="textColor">#8D5504</color>
+
+
+    <!-- Missing colors -->
+    <color name="colorHintText">#757575</color>
+    <color name="colorError">#FF0000</color>
+
+    <color name="colorFabBackground">#000000</color>
+    <color name="colorFabIcon">#FFFFFF</color>
+
+
+    <color name="colorTextPrimary">#000000</color>
+
+    <color name="colorSecondary">#03DAC5</color>
+
 </resources>

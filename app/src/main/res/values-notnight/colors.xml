@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light theme colors -->
+    <color name="colorPrimary">#388E3C</color>
+    <color name="colorPrimaryDark">#1B5E20</color>
+    <color name="colorAccent">#A5D6A7</color>
+
+    <color name="colorBackground">#F9F9F9</color>
+    <color name="colorText">#000000</color>
+    <color name="colorTextSecondary">#757575</color>
+
+    <color name="colorExpense">#D32F2F</color>
+    <color name="colorIncome">#388E3C</color>
+
+    <color name="colorCard">#FFFFFF</color>
+    <color name="colorCardText">#000000</color>
+
+    <color name="colorIcon">#000000</color>
+    <color name="colorIconBackground">#E0E0E0</color>
+
+    <color name="colorButtonText">#FFFFFF</color>
+    <color name="colorButtonBackground">#6B911A</color>
+    <color name="colorButtonOutline">#388E3C</color>
+    <color name="colorButtonOutlineText">#388E3C</color>
+
+    <color name="selected_nav_item">#388E3C</color>
+    <color name="unselected_nav_item">#B0B0B0</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- Optional: used for charts or highlights -->
+    <color name="textColor">#03A9F4</color>
+
+
+    <!-- Add these missing colors -->
+    <color name="colorHintText">#757575</color>
+    <color name="colorError">#FF0000</color>
+
+    <color name="colorFabBackground">#000000</color>
+    <color name="colorFabIcon">#FFFFFF</color>
+
+    <color name="colorTextPrimary">#000000</color>
+
+    <color name="colorSecondary">#03DAC5</color>
+
+</resources>
