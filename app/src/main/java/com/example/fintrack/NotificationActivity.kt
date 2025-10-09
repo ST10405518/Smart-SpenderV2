@@ -11,10 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.SmartSpender.adapters.NotificationAdapter
 import com.example.SmartSpender.database.DatabaseHelper
-import com.example.SmartSpender.models.Notification
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.util.*
+import com.example.SmartSpender.models.Notification
+
 
 class NotificationActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var rvNotifications: RecyclerView
@@ -104,7 +105,7 @@ class NotificationActivity : AppCompatActivity(), BottomNavigationView.OnNavigat
     private fun loadNotifications() {
         // Get actual notifications from database
         val notifications = dbHelper.getNotificationsByUserId(userId)
-        
+
         // If no notifications, create a welcome notification
         if (notifications.isEmpty()) {
             val welcomeNotification = Notification(
@@ -117,7 +118,7 @@ class NotificationActivity : AppCompatActivity(), BottomNavigationView.OnNavigat
             )
             notifications.add(welcomeNotification)
         }
-        
+
         notificationAdapter.updateNotifications(notifications)
     }
 

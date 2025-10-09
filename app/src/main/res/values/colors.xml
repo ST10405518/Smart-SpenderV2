@@ -48,4 +48,8 @@
 
     <color name="colorSecondary">#03DAC5</color>
 
+    <color name="red">#E53935</color>
+    <color name="yellow">#FDD835</color>
+    <color name="green">#43A047</color>
+
 </resources>

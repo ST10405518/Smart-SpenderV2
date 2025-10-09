@@ -398,8 +398,8 @@ class AddSpendingActivity : AppCompatActivity(), BottomNavigationView.OnNavigati
                 // Update wallet balance
                 val wallet = dbHelper.getWalletByUserId(userId)
                 if (wallet != null) {
-                    wallet.balance -= amount
-                    dbHelper.updateWallet(wallet)
+                    val newBalance = wallet.balance - amount
+                    dbHelper.updateWalletBalance(userId, newBalance)
                 }
 
                 Toast.makeText(this, "Expense added successfully", Toast.LENGTH_SHORT).show()

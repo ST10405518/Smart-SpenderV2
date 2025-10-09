@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.SmartSpender.adapters.TransactionAdapter
 import com.example.SmartSpender.database.DatabaseHelper
-import com.example.SmartSpender.models.CategorySpending
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.XAxis
@@ -23,9 +22,15 @@ import com.github.mikephil.charting.formatter.PercentFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.progressindicator.LinearProgressIndicator
 import com.google.android.material.tabs.TabLayout
 import java.text.SimpleDateFormat
 import java.util.*
+import com.example.SmartSpender.models.Wallet
+import com.example.SmartSpender.models.Notification
+import com.example.SmartSpender.models.Transaction
+import com.example.SmartSpender.models.CategorySpending
+
 
 class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var lineChart: LineChart
@@ -43,6 +48,18 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
     private lateinit var tvNoData: TextView
     private lateinit var dbHelper: DatabaseHelper
     private lateinit var transactionAdapter: TransactionAdapter
+
+    // Gamification views
+    private lateinit var tvXP: TextView
+    private lateinit var tvLevel: TextView
+    private lateinit var tvRank: TextView
+    private lateinit var progressXP: LinearProgressIndicator
+    private lateinit var tvStreak: TextView
+    private lateinit var tvBadges: TextView
+    private lateinit var tvSavings: TextView
+    private lateinit var layoutRecentAchievement: LinearLayout
+    private lateinit var tvRecentAchievement: TextView
+
     private var userId: Int = 0
     private val startCalendar = Calendar.getInstance()
     private val endCalendar = Calendar.getInstance()
@@ -78,6 +95,17 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         btnSelectEndDate = findViewById(R.id.btnSelectEndDate)
         btnApplyDateFilter = findViewById(R.id.btnApplyDateFilter)
         tvNoData = findViewById(R.id.tvNoData)
+
+        // Initialize gamification views
+        tvXP = findViewById(R.id.tvXP)
+        tvLevel = findViewById(R.id.tvLevel)
+        tvRank = findViewById(R.id.tvRank)
+        progressXP = findViewById(R.id.progressXP)
+        tvStreak = findViewById(R.id.tvStreak)
+        tvBadges = findViewById(R.id.tvBadges)
+        tvSavings = findViewById(R.id.tvSavings)
+        layoutRecentAchievement = findViewById(R.id.layoutRecentAchievement)
+        tvRecentAchievement = findViewById(R.id.tvRecentAchievement)
 
         // Initialize database helper
         dbHelper = DatabaseHelper(this)
@@ -150,6 +178,7 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         setupCharts()
         loadChartData(Calendar.getInstance().get(Calendar.YEAR))
         loadCategorySpendingData()
+        loadGamificationData()
 
         // Default to pie chart view
         tabLayout.getTabAt(1)?.select()
@@ -183,12 +212,14 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
                 pieChart.visibility = View.GONE
                 spinnerYear.visibility = View.VISIBLE
                 findViewById<View>(R.id.dateFilterLayout).visibility = View.GONE
+                loadChartData(Calendar.getInstance().get(Calendar.YEAR))
             }
             1 -> { // Category breakdown
                 lineChart.visibility = View.GONE
                 pieChart.visibility = View.VISIBLE
                 spinnerYear.visibility = View.GONE
                 findViewById<View>(R.id.dateFilterLayout).visibility = View.VISIBLE
+                loadCategorySpendingData()
             }
         }
     }
@@ -198,6 +229,7 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         loadData()
         loadChartData(Calendar.getInstance().get(Calendar.YEAR))
         loadCategorySpendingData()
+        loadGamificationData()
     }
 
     private fun loadData() {
@@ -224,13 +256,13 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         xAxis.setDrawGridLines(false)
         xAxis.granularity = 1f
         xAxis.textSize = 12f
-        xAxis.textColor = Color.BLACK
+        xAxis.textColor = ContextCompat.getColor(this, R.color.colorText)
 
         val leftAxis = lineChart.axisLeft
         leftAxis.setDrawGridLines(true)
         leftAxis.axisMinimum = 0f
         leftAxis.textSize = 12f
-        leftAxis.textColor = Color.BLACK
+        leftAxis.textColor = ContextCompat.getColor(this, R.color.colorText)
 
         val rightAxis = lineChart.axisRight
         rightAxis.isEnabled = false
@@ -241,8 +273,8 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         pieChart.setExtraOffsets(5f, 10f, 5f, 5f)
         pieChart.dragDecelerationFrictionCoef = 0.95f
         pieChart.isDrawHoleEnabled = true
-        pieChart.setHoleColor(Color.WHITE)
-        pieChart.setTransparentCircleColor(Color.WHITE)
+        pieChart.setHoleColor(ContextCompat.getColor(this, R.color.colorCard))
+        pieChart.setTransparentCircleColor(ContextCompat.getColor(this, R.color.colorCard))
         pieChart.setTransparentCircleAlpha(110)
         pieChart.holeRadius = 58f
         pieChart.transparentCircleRadius = 61f
@@ -257,7 +289,8 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         pieChart.legend.orientation = com.github.mikephil.charting.components.Legend.LegendOrientation.HORIZONTAL
         pieChart.legend.setDrawInside(false)
         pieChart.legend.textSize = 12f
-        pieChart.setEntryLabelColor(Color.BLACK)
+        pieChart.legend.textColor = ContextCompat.getColor(this, R.color.colorText)
+        pieChart.setEntryLabelColor(ContextCompat.getColor(this, R.color.colorText))
         pieChart.setEntryLabelTextSize(12f)
     }
 
@@ -280,6 +313,7 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         dataSet.circleRadius = 4f
         dataSet.setDrawCircleHole(false)
         dataSet.valueTextSize = 12f
+        dataSet.valueTextColor = ContextCompat.getColor(this, R.color.colorText)
         dataSet.setDrawFilled(true)
         dataSet.fillColor = ContextCompat.getColor(this, R.color.colorPrimary)
         dataSet.fillAlpha = 30
@@ -323,8 +357,8 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
 
             // Assign colors based on category
             val color = when (category.category.lowercase(Locale.ROOT)) {
-                "food" -> Color.parseColor("#FF9800")
-                "entertainment" -> Color.parseColor("#4CAF50")
+                "food" -> ContextCompat.getColor(this, R.color.colorExpense)
+                "entertainment" -> ContextCompat.getColor(this, R.color.colorIncome)
                 "groceries" -> Color.parseColor("#9C27B0")
                 "movies" -> Color.parseColor("#2196F3")
                 "transport" -> Color.parseColor("#3D82F7")
@@ -343,19 +377,128 @@ class StatisticsActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         dataSet.valueLinePart1Length = 0.2f
         dataSet.valueLinePart2Length = 0.4f
         dataSet.yValuePosition = PieDataSet.ValuePosition.OUTSIDE_SLICE
+        dataSet.valueTextColor = ContextCompat.getColor(this, R.color.colorText)
 
         val data = PieData(dataSet)
         data.setValueFormatter(PercentFormatter(pieChart))
         data.setValueTextSize(11f)
-        data.setValueTextColor(Color.BLACK)
+        data.setValueTextColor(ContextCompat.getColor(this, R.color.colorText))
 
         pieChart.data = data
         pieChart.centerText = "Category\nBreakdown"
+        pieChart.setCenterTextColor(ContextCompat.getColor(this, R.color.colorText))
         pieChart.invalidate()
 
         // Update transactions list with filtered data
         val transactions = dbHelper.getTransactionsByPeriod(userId, startDate, endDate)
         transactionAdapter.updateTransactions(transactions)
+    }
+
+    private fun loadGamificationData() {
+        // Get gamification data from shared preferences
+        val sharedPref = getSharedPreferences("SmartSpenderPrefs", MODE_PRIVATE)
+
+        // XP and Level System
+        val xp = sharedPref.getInt("userXP", 0)
+        val level = calculateLevel(xp)
+        val xpForCurrentLevel = getXPForLevel(level)
+        val xpForNextLevel = getXPForLevel(level + 1)
+        val xpProgress = if (xpForNextLevel > xpForCurrentLevel) {
+            ((xp - xpForCurrentLevel).toFloat() / (xpForNextLevel - xpForCurrentLevel).toFloat()) * 100
+        } else {
+            100f
+        }
+
+        // Streak System
+        val streak = sharedPref.getInt("userStreak", 0)
+
+        // Badges System
+        val badgesCount = sharedPref.getInt("userBadgesCount", 0)
+
+        // Savings Progress
+        val savingsProgress = calculateSavingsProgress()
+
+        // Rank System
+        val rank = getRankForLevel(level)
+
+        // Recent Achievement
+        val recentAchievement = getRecentAchievement()
+
+        // Update UI with gamification data
+        tvXP.text = "$xp XP"
+        tvLevel.text = "Level $level"
+        tvRank.text = rank
+        progressXP.progress = xpProgress.toInt()
+        tvStreak.text = streak.toString()
+        tvBadges.text = badgesCount.toString()
+        tvSavings.text = "${savingsProgress}%"
+
+        // Show recent achievement if available
+        if (recentAchievement.isNotEmpty()) {
+            layoutRecentAchievement.visibility = View.VISIBLE
+            tvRecentAchievement.text = recentAchievement
+        } else {
+            layoutRecentAchievement.visibility = View.GONE
+        }
+    }
+
+    private fun calculateLevel(xp: Int): Int {
+        return when {
+            xp >= 5000 -> 10
+            xp >= 2500 -> 9
+            xp >= 1500 -> 8
+            xp >= 1000 -> 7
+            xp >= 750 -> 6
+            xp >= 500 -> 5
+            xp >= 300 -> 4
+            xp >= 150 -> 3
+            xp >= 50 -> 2
+            else -> 1
+        }
+    }
+
+    private fun getXPForLevel(level: Int): Int {
+        return when (level) {
+            1 -> 0
+            2 -> 50
+            3 -> 150
+            4 -> 300
+            5 -> 500
+            6 -> 750
+            7 -> 1000
+            8 -> 1500
+            9 -> 2500
+            10 -> 5000
+            else -> 0
+        }
+    }
+
+    private fun getRankForLevel(level: Int): String {
+        return when (level) {
+            in 1..2 -> "Novice"
+            in 3..4 -> "Apprentice"
+            in 5..6 -> "Pro"
+            in 7..8 -> "Expert"
+            in 9..10 -> "Master"
+            else -> "Beginner"
+        }
+    }
+
+    private fun calculateSavingsProgress(): Int {
+        // Calculate savings progress based on user's savings goals and actual savings
+        val totalIncome = dbHelper.getTotalIncomeByUserId(userId)
+        val totalSavings = dbHelper.getTotalSavingsByUserId(userId)
+
+        return if (totalIncome > 0) {
+            ((totalSavings / totalIncome) * 100).toInt()
+        } else {
+            0
+        }
+    }
+
+    private fun getRecentAchievement(): String {
+        val sharedPref = getSharedPreferences("SmartSpenderPrefs", MODE_PRIVATE)
+        return sharedPref.getString("recentAchievement", "") ?: ""
     }
 
     private fun getMonthName(month: Int): String {

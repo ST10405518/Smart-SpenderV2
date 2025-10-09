@@ -8,8 +8,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.SmartSpender.database.DatabaseHelper
-import com.example.SmartSpender.models.Wallet
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.SmartSpender.models.Wallet
+
 
 class AddWalletActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var etNameOnCard: EditText

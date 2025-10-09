@@ -1,14 +1,18 @@
 package com.example.SmartSpender
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.SmartSpender.database.DatabaseHelper
 import com.example.SmartSpender.models.Notification
 import com.example.SmartSpender.models.Wallet
@@ -28,6 +32,7 @@ class EditWalletActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
     private lateinit var btnEdit: Button
     private lateinit var fabAddFunds: FloatingActionButton
     private lateinit var bottomNavigation: BottomNavigationView
+    private lateinit var menuButton: ImageButton
     private lateinit var dbHelper: DatabaseHelper
     private var userId: Int = 0
     private var wallet: Wallet? = null
@@ -59,6 +64,7 @@ class EditWalletActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         btnEdit = findViewById(R.id.btnEdit)
         fabAddFunds = findViewById(R.id.fabAddFunds)
         bottomNavigation = findViewById(R.id.bottomNavigation)
+        menuButton = findViewById(R.id.btnMenu)
 
         // Initialize database helper
         dbHelper = DatabaseHelper(this)
@@ -66,6 +72,48 @@ class EditWalletActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         // Set up bottom navigation
         bottomNavigation.setOnNavigationItemSelectedListener(this)
         bottomNavigation.menu.findItem(R.id.navigation_wallet).isChecked = true
+
+        // Set up menu button
+        menuButton.setOnClickListener {
+            val popupMenu = PopupMenu(this, menuButton)
+            popupMenu.menuInflater.inflate(R.menu.main_menu, popupMenu.menu)
+
+            val darkModeItem = popupMenu.menu.findItem(R.id.menu_dark_mode)
+            darkModeItem.title = if (isDarkModeEnabled()) "Light Mode" else "Dark Mode"
+
+            popupMenu.setOnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.menu_profile -> {
+                        startActivity(Intent(this, ProfileActivity::class.java))
+                        true
+                    }
+                    R.id.menu_settings -> {
+                        startActivity(Intent(this, SettingsActivity::class.java))
+                        true
+                    }
+                    R.id.menu_expense_report -> {
+                        startActivity(Intent(this, ExpenseReportActivity::class.java))
+                        true
+                    }
+                    R.id.menu_dark_mode -> {
+                        toggleDarkMode()
+                        true
+                    }
+                    R.id.menu_logout -> {
+                        val sharedPref = getSharedPreferences("SmartSpenderPrefs", MODE_PRIVATE)
+                        with(sharedPref.edit()) {
+                            clear()
+                            apply()
+                        }
+                        startActivity(Intent(this, LoginActivity::class.java))
+                        finish()
+                        true
+                    }
+                    else -> false
+                }
+            }
+            popupMenu.show()
+        }
 
         // Load wallet data
         loadWalletData()
@@ -84,6 +132,28 @@ class EditWalletActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         fabAddFunds.setOnClickListener {
             showAddFundsDialog()
         }
+    }
+
+    // Dark mode helper methods
+    private fun isDarkModeEnabled(): Boolean {
+        val sharedPreferences = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
+        return sharedPreferences.getBoolean("nightMode", false)
+    }
+
+    private fun toggleDarkMode() {
+        val sharedPreferences = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val currentlyDark = isDarkModeEnabled()
+
+        if (currentlyDark) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            editor.putBoolean("nightMode", false)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            editor.putBoolean("nightMode", true)
+        }
+        editor.apply()
+        recreate()
     }
 
     private fun loadWalletData() {
@@ -145,17 +215,25 @@ class EditWalletActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         }
 
         // Update wallet object
-        wallet?.let {
-            it.nameOnCard = nameOnCard
-            it.cardNumber = cardNumber
-            it.cvc = cvc
-            it.expirationDate = expirationDate
-            it.zip = zip
+        wallet?.let { currentWallet ->
+            // Create a new wallet object with updated values
+            val updatedWallet = Wallet(
+                id = currentWallet.id,
+                userId = currentWallet.userId,
+                nameOnCard = nameOnCard,
+                cardNumber = cardNumber,
+                cvc = cvc,
+                expirationDate = expirationDate,
+                zip = zip,
+                balance = currentWallet.balance
+            )
 
             // Update wallet in database
-            val success = dbHelper.updateWallet(it)
+            val success = dbHelper.updateWallet(updatedWallet)
 
             if (success) {
+                // Update local wallet reference
+                wallet = updatedWallet
                 Toast.makeText(this, "Wallet updated successfully", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
@@ -197,9 +275,12 @@ class EditWalletActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
                     val amount = amountStr.toDoubleOrNull()
                     if (amount != null && amount > 0) {
                         if (wallet != null) {
-                            wallet!!.balance += amount
-                            val success = dbHelper.updateWallet(wallet!!)
+                            val newBalance = wallet!!.balance + amount
+                            val success = dbHelper.updateWalletBalance(userId, newBalance)
                             if (success) {
+                                // Update local wallet balance
+                                wallet = dbHelper.getWalletByUserId(userId)
+
                                 // Format balance
                                 val currencyFormat = NumberFormat.getCurrencyInstance(Locale("en", "ZA"))
                                 currencyFormat.currency = Currency.getInstance("ZAR")
@@ -211,7 +292,7 @@ class EditWalletActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
                                     userId,
                                     "Funds added to wallet: +R$amount",
                                     "income",
-                                    amount, // Positive amount for adding funds
+                                    amount,
                                     Calendar.getInstance().time
                                 )
                                 dbHelper.addNotification(notification)

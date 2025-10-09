@@ -3,7 +3,7 @@ package com.example.SmartSpender.models
 import java.util.*
 
 data class Transaction(
-    val id: Int,
+    val id: Int = 0,
     val userId: Int,
     val name: String,
     val company: String,

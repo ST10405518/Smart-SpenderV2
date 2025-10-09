@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.SmartSpender.adapters.TransactionAdapter
 import com.example.SmartSpender.database.DatabaseHelper
-import com.example.SmartSpender.models.Transaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
+import com.example.SmartSpender.models.Transaction
 
 class ExpenseReportActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var etStartDate: EditText
@@ -81,13 +81,11 @@ class ExpenseReportActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
             popupMenu.setOnMenuItemClickListener { item ->
                 when (item.itemId) {
                     R.id.menu_profile -> {
-                        // Handle profile click
-                        Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this, ProfileActivity::class.java))
                         true
                     }
                     R.id.menu_settings -> {
-                        // Handle settings click
-                        Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this, SettingsActivity::class.java))
                         true
                     }
                     R.id.menu_expense_report -> {
@@ -178,10 +176,12 @@ class ExpenseReportActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
         val transactions = dbHelper.getTransactionsByPeriod(userId, startDate, endDate)
         transactionAdapter.updateTransactions(transactions)
 
-        // Calculate total expenses
+        // Calculate total expenses (only negative amounts)
         var totalExpenses = 0.0
         for (transaction in transactions) {
-            totalExpenses += transaction.amount
+            if (transaction.amount < 0) {
+                totalExpenses += transaction.amount
+            }
         }
 
         // Format and display total expenses
