@@ -193,6 +193,7 @@ SmartSpender/
 | Phathisa Ndaliso   | ST10241408     |
 | Lindokuhle Zwane   | ST10381088     |
 | Musawenkosi Bhebhe | ST10405518     |
+| Rendani George Nekhavhambe | ST10334177     |
 
 ---
 
