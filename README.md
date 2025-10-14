@@ -1,6 +1,6 @@
 
 
-# 💸 SmartSpender App — *Part 3*
+# 💸 SmartSpender App — *Part 2*
 
 > 📱 **Your personal offline budgeting and expense manager with built-in motivation tools**
 
