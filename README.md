@@ -125,8 +125,8 @@ If you save R1,000 this month compared to R5,000 last month:
 | 🌗 **Dark/Light Mode**        | Switch between light and dark themes for visual comfort.                          |
 | 🔔 **Notification Center**    | Real-time alerts for budget reminders, overspending, and savings achievements.    |
 | 📊 **SmartPulse Visualizer**  | Graphical view of your monthly spending trends and goal adherence.                |
-🌍 Language Settings
-Switch between English, isiZulu, and Afrikaans seamlessly within the app.
+🌍 Language Settings                 Switch between English, isiZulu, and Afrikaans seamlessly                                           within the app.
+
 ---
 
 ## ⚙️ Tech Stack
