@@ -80,6 +80,18 @@ All interface elements, notifications, and feedback messages automatically updat
 **Why it matters:**
 This enhancement makes the app more inclusive and accessible to South African users who prefer managing their finances in their home language — helping bridge the digital language gap.
 
+### 🔗 RESTful API Login Integration (NEW)
+Users can now log in using external APIs, such as Google Authentication, for a faster and more secure experience.
+The app connects with a RESTful API backend to validate and manage user credentials securely.
+
+***This feature gives users the flexibility to choose between:***
+Local app login (offline mode)
+Google Sign-In (online mode)
+Benefits:
+Secure OAuth 2.0-based authentication
+Simplified sign-in process
+Seamless connection between local data and cloud-linked accounts
+
 
 #### 🏅 Badges System
 
