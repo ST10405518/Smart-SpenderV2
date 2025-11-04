@@ -15,7 +15,7 @@ It provides a clear, friendly interface where users can log expenses, categorize
 The app was built using **Kotlin** and **RoomDB (SQLite)**, ensuring secure, local storage of financial data without requiring an internet connection.
 
 ## GitHub repository link: https://github.com/ST10405518/Smart-SpenderV2.git   
-## YouTube video demonstration: https://youtube.com/shorts/v4vv4KhXaWE?feature=shared
+## YouTube video demonstration: https://youtube.com/shorts/T_MEKVJEtnE?si=V2N5pDMCLzM-eomY 
 
 ---
 
