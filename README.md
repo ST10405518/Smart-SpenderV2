@@ -207,7 +207,7 @@ SmartSpender/
 
 ## 🎥 Video Demo & Design
 
-* 📽️ [YouTube App Demo Video](https://www.youtube.com/)
+* 📽️ [YouTube App Demo Video](https://youtube.com/shorts/T_MEKVJEtnE?si=V2N5pDMCLzM-eomY)
 
 ---
 
