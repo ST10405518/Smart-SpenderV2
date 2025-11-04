@@ -17,7 +17,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_back"
-            android:contentDescription="Back"
+            android:contentDescription="@string/back"
             android:tint="@color/colorText" />
 
         <LinearLayout
@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Profile"
+                android:text="@string/profile"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -106,7 +106,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Income"
+                        android:text="@string/income"
                         android:textSize="14sp"
                         android:textColor="@color/colorTextSecondary" />
 
@@ -136,7 +136,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Expenses"
+                        android:text="@string/expenses"
                         android:textSize="14sp"
                         android:textColor="@color/colorTextSecondary" />
 
@@ -155,7 +155,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="General"
+            android:text="@string/general"
             android:textStyle="bold"
             android:layout_marginTop="24dp"
             android:textSize="16sp"
@@ -175,14 +175,13 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_security"
-                 />
+                android:src="@drawable/ic_security" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Security"
+                android:text="@string/security"
                 android:textSize="16sp"
                 android:textColor="@color/colorText" />
         </LinearLayout>

@@ -4,7 +4,7 @@
             "outputFile": "com.example.SmartSpender.test.app-mergeDebugAndroidTestResources-3:/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RC_Student_Lab\\.gradle\\caches\\transforms-3\\8b7f5e5c2a7dddd174d736e15fc09fca\\transformed\\core-1.5.0\\res\\values\\values.xml",
+                    "source": "C:\\Users\\RC_Student_Lab\\.gradle\\caches\\9.0-milestone-1\\transforms\\1fe451c598beee7ca1cca7a3e764d8f3\\transformed\\core-1.5.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,11",
                         "startColumns": "0,0",

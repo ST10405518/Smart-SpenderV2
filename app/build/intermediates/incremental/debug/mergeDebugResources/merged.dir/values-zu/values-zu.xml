@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="languages">
+        <item>IsiNgisi</item>
+        <item>IsiBhunu</item>
+        <item>IsiZulu</item>
+        <item>IsiXhosa</item>
+    </string-array>
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d izaziso ezintsha</item>
     <item quantity="other">%d izaziso ezintsha</item>
@@ -31,11 +37,26 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Yabelana no"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Yabelana ne-<ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Goqa"</string>
+    <string name="achievement_unlocked">Impumelelo Ivuliwe!</string>
+    <string name="add">Faka</string>
+    <string name="add_expense">Faka izindleko</string>
+    <string name="add_icon">Faka uphawu</string>
+    <string name="add_photo">Faka isithombe</string>
+    <string name="add_wallet">Faka i-Wallet</string>
+    <string name="added_fund">Ufake imali engu-R%1$s</string>
+    <string name="amount">Inani</string>
+    <string name="app_language">Ulimi Lohlelo</string>
+    <string name="app_name">Umchithimali Ohlakaniphile</string>
+    <string name="apply_filter">Faka Isihlungi</string>
+    <string name="back">Buyela Emuva</string>
+    <string name="badges">Amabhajethi</string>
+    <string name="balance">Ibhalansi</string>
     <string name="bottomsheet_action_collapse">Goqa ishidi eliphansi</string>
     <string name="bottomsheet_action_expand">Nweba ishidi eliphansi</string>
     <string name="bottomsheet_action_expand_halfway">Nweba phakathi</string>
     <string name="bottomsheet_drag_handle_clicked">Hudula isibambi esithephwe kabili</string>
     <string name="bottomsheet_drag_handle_content_description">Hudula isibambi</string>
+    <string name="budget_amount">Inani Lebhajethi</string>
     <string msgid="881409763997275156" name="call_notification_answer_action">"Phendula"</string>
     <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Ividiyo"</string>
     <string msgid="3229508546291798546" name="call_notification_decline_action">"Yenqaba"</string>
@@ -43,6 +64,9 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"Ikholi engenayo"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Ikholi eqhubekayo"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Ukuveza ikholi engenayo"</string>
+    <string name="cancel">Khansela</string>
+    <string name="card_number">Inombolo yekhadi</string>
+    <string name="category_breakdown">Ukuhlukaniswa Kwezigaba</string>
     <string name="character_counter_content_description">Izinhlamvu ezifakiwe ezingu-%1$d zokungu-%2$d</string>
     <string name="character_counter_overflowed_content_description">Umkhawulo wezinhlamvu udlule u-%1$d kokungu-%2$d</string>
     <string name="clear_text_end_icon_content_description">Sula umbhalo</string>
@@ -64,14 +88,57 @@
     <string name="common_open_on_phone">Vula kufoni</string>
     <string name="common_signin_button_text">Ngena ngemvume</string>
     <string name="common_signin_button_text_long">Ngena ngemvume nge-Google</string>
+    <string name="complete_first_transaction">Qeda ukuthengiselana kwakho kokuqala ukuze uvule impumelelo!</string>
     <string msgid="3260749812566568062" name="copy_toast_msg">"Isixhumanisi sikopishelwe ku-clipboard"</string>
+    <string name="cvc">CVC</string>
+    <string name="dark_mode">Imodi Emnyama</string>
+    <string name="dark_mode_enabled">Imodi emnyama ivuliwe</string>
+    <string name="date">Usuku</string>
+    <string name="date_of_birth">Usuku lokuzalwa</string>
+    <string name="day_streak">Ukulandelana Kwemihla</string>
+    <string name="delete">Susa</string>
+    <string name="discard">Lahla</string>
+    <string name="edit">Hlela</string>
+    <string name="edit_wallet">Hlela i-Wallet</string>
+    <string name="email">I-imeyili</string>
+    <string name="end_date">Usuku Lokugcina</string>
+    <string name="end_time">Isikhathi sokuphela</string>
+    <string name="enter_amount_to_add">Faka inani ofuna ukulifaka</string>
+    <string name="enter_email">Faka i-imeyili yakho</string>
+    <string name="enter_monthly_budget">Faka ibhajethi yakho yanyanga zonke</string>
+    <string name="enter_phone">Faka inombolo yakho yeselula</string>
+    <string name="enter_username">Faka igama lakho lomsebenzisi</string>
+    <string name="error_card_number_invalid">Sicela ufake inombolo yekhadi evumelekile (16 izinombolo)</string>
+    <string name="error_cvc_invalid">Sicela ufake i-CVC evumelekile (3 izinombolo)</string>
+    <string name="error_email_invalid">Faka i-imeyili evumelekile</string>
+    <string name="error_expiration_date_empty">Sicela ufake usuku lokuphelelwa yisikhathi</string>
     <string name="error_icon_content_description">Iphutha</string>
+    <string name="error_name_empty">Sicela ufake igama elisekhadi</string>
+    <string name="error_username_empty">Igama lomsebenzisi alikwazi ukuba lingenalutho</string>
+    <string name="error_zip_empty">Sicela ufake ikhodi ye-Zip</string>
+    <string name="expense_category">Isigaba sezindleko</string>
+    <string name="expense_name">Igama lezindleko</string>
+    <string name="expense_receipt_images">Izithombe Zokwamukela Izindleko</string>
+    <string name="expense_report">Umbiko Wezindleko</string>
+    <string name="expenses">Izindleko</string>
+    <string name="expiration_date">Usuku lokuphelelwa yisikhathi</string>
     <string name="exposed_dropdown_menu_content_description">Bonisa imenyu yokudonsela phansi</string>
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopisha isixhumanisi"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Vula kusiphequluli"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Yabelana ngesixhumanisi"</string>
+    <string name="full_name">Igama eliphelele</string>
+    <string name="general">Okujwayelekile</string>
+    <string name="generate_report">Dala Umbiko</string>
+    <string name="get_started">Qala</string>
+    <string name="goal_progress">Inqubekela Phambili Yomgomo</string>
+    <string name="history">Umlando</string>
     <string name="icon_content_description">Isithonjana sebhokisi</string>
+    <string name="income">Imali engenayo</string>
     <string name="item_view_role_description">Ithebhu</string>
+    <string name="level_1">Izinga 1</string>
+    <string name="light_mode_enabled">Imodi ekhanyayo ivuliwe</string>
+    <string name="login">Ngena</string>
+    <string name="logout">Phuma</string>
     <string name="material_clock_toggle_content_description">Khetha u-AM noma u-PM</string>
     <string name="material_hour_24h_suffix">amahora angu-%1$s</string>
     <string name="material_hour_selection">Khetha ihora</string>
@@ -85,6 +152,8 @@
     <string name="material_timepicker_pm">PM</string>
     <string name="material_timepicker_select_time">Khetha isikhathi</string>
     <string name="material_timepicker_text_input_mode_description">Shintshela kumodi yokufaka umbhalo ngokufaka isikhathi.</string>
+    <string name="mobile_number">Inombolo yeselula</string>
+    <string name="monthly_spending">Ukusetshenziswa Kwenyanga</string>
     <string name="mtrl_badge_numberless_content_description">Isaziso esisha</string>
     <string name="mtrl_chip_close_icon_content_description">Susa i-%1$s</string>
     <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Izaziso ezintsha ezingaphezu kokungu-%1$d</string>
@@ -127,9 +196,50 @@
     <string name="mtrl_picker_toggle_to_year_selection">Thepha ukuze ushintshele ekubukeni konyaka</string>
     <string name="mtrl_timepicker_cancel">Khansela</string>
     <string name="mtrl_timepicker_confirm">KULUNGILE</string>
+    <string name="name_on_card">Igama elisekhadi</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Zulazulela phezulu"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Vula idrowa lakho lokuzula"</string>
+    <string name="no_data_available">Ayikho idatha etholakalayo ngalesi sikhathi</string>
+    <string name="notification">Isaziso</string>
+    <string name="novice">Okuqalayo</string>
+    <string name="password">Iphasiwedi</string>
     <string name="password_toggle_content_description">Bonisa iphasiwedi</string>
+    <string name="phone_number">Inombolo yeselula</string>
+    <string name="profile">Iphrofayela</string>
+    <string name="r_xxxx">R XXXX</string>
+    <string name="recent_transactions">Izokwenziwa Zakamuva</string>
+    <string name="save_settings">Gcina Izilungiselelo</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Sesha"</string>
+    <string name="security">Ubumfihlo</string>
+    <string name="security_settings_placeholder">Izilungiselelo zobumfihlo zizobekwa lapha.</string>
+    <string name="select">Khetha</string>
+    <string name="select_date_range">Khetha Uhlelo Lwamasuku</string>
+    <string name="settings">Izilungiselelo</string>
+    <string name="settings_saved">Izilungiselelo zigciniwe</string>
+    <string name="signup">Bhalisa</string>
+    <string name="smartspender">Umchithimali Ohlakaniphile</string>
+    <string name="spending_limit_reached">Usufinyelele ku-R%1$s wokusetshenziswa.</string>
+    <string name="spendings">Ukusetshenziswa</string>
+    <string name="start_date">Usuku Lokuqala</string>
+    <string name="start_time">Isikhathi sokuqala</string>
+    <string name="statistics">Izibalo</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="terms_policy">Qhubeka kusho ukuthi uyavuma Imigomo Yokusebenzisa kanye Nenqubomgomo yobumfihlo.</string>
+    <string name="title_add">Faka</string>
+    <string name="title_home">Ikhaya</string>
+    <string name="title_notifications">Izaziso</string>
+    <string name="title_stats">Izibalo</string>
+    <string name="title_wallet">I-Wallet</string>
+    <string name="today">Namuhla</string>
+    <string name="total_expenses">Ingqikithi yezindleko: %s</string>
+    <string name="total_expenses_r_0_00">Ingqikithi yezindleko: R 0.00</string>
+    <string name="total_spent">Ingqikithi esetshenzisiwe</string>
+    <string name="username">Igama lomsebenzisi</string>
+    <string name="wallet_added_success">I-Wallet ifakwe ngempumelelo</string>
+    <string name="xp_0_50">0/50 XP</string>
+    <string name="xxxx">XXXX</string>
+    <string name="yesterday">Izolo</string>
+    <string name="your_card_details">Imininingwane yekhadi lakho</string>
+    <string name="your_journey">Uhambo Lwakho</string>
+    <string name="zip">Ikhodi ye-Zip</string>
 </resources>

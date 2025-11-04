@@ -1,8 +1,5 @@
 <resources>
 
-    <string name="appname">DarkModeExample</string>
-
-
     <string name="app_name">SmartSpender</string>
     <string name="title_home">Home</string>
     <string name="title_stats">Statistics</string>
@@ -48,9 +45,83 @@
     <string name="spendings">Spendings</string>
     <string name="total_spent">Total spent</string>
 
+    <string name="settings_saved">Settings Saved</string>
+    <string name="dark_mode_enabled">Dark Mode Enabled</string>
+    <string name="light_mode_enabled">Light Mode Enabled</string>
+    <string name="error_username_empty">Username cannot be empty</string>
+    <string name="error_email_invalid">Enter a valid email</string>
+
     <string name="notification">Notification</string>
     <string name="spending_limit_reached">You have reached R%1$s spending.</string>
     <string name="added_fund">You Added fund R%1$s</string>
+
+    <!-- Fixed capitalization -->
+    <string name="smartspender">SmartSpender</string>
+    <string name="date">Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="expense_receipt_images">Expense Receipt Images</string>
+    <string name="cancel">Cancel</string>
+    <string name="app_language">App Language</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="username">Username</string>
+    <string name="enter_username">Enter your username</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_phone">Enter your phone number</string>
+
+    <!-- New strings from previous layouts -->
+    <string name="back">Back</string>
+    <string name="profile">Profile</string>
+    <string name="income">Income</string>
+    <string name="expenses">Expenses</string>
+    <string name="general">General</string>
+    <string name="security">Security</string>
+    <string name="expense_report">Expense Report</string>
+    <string name="logout">Logout</string>
+    <string name="generate_report">Generate Report</string>
+    <string name="total_expenses">Total Expenses: %s</string>
+    <string name="total_expenses_r_0_00">Total Expenses: R 0.00</string>
+    <string name="security_settings_placeholder">Security settings will go here.</string>
+
+    <!-- Statistics Activity strings -->
+    <string name="monthly_spending">Monthly Spending</string>
+    <string name="category_breakdown">Category Breakdown</string>
+    <string name="no_data_available">No data available for selected period</string>
+    <string name="select_date_range">Select Date Range</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="select">Select</string>
+    <string name="apply_filter">Apply Filter</string>
+    <string name="your_journey">Your Journey</string>
+    <string name="novice">Novice</string>
+    <string name="level_1">Level 1</string>
+    <string name="xp_0_50">0/50 XP</string>
+    <string name="day_streak">Day Streak</string>
+    <string name="badges">Badges</string>
+    <string name="goal_progress">Goal Progress</string>
+    <string name="achievement_unlocked">Achievement Unlocked!</string>
+    <string name="complete_first_transaction">Complete your first transaction to unlock achievements!</string>
+    <string name="recent_transactions">Recent Transactions</string>
+
+    <!-- Dialog strings -->
+    <string name="enter_amount_to_add">Enter amount to add</string>
+    <string name="enter_monthly_budget">Enter your monthly budget</string>
+    <string name="budget_amount">Budget Amount</string>
+
+    <!-- Placeholder strings -->
+    <string name="xxxx">XXXX</string>
+    <string name="r_xxxx">R XXXX</string>
+
+    <!-- Error messages -->
+    <string name="error_name_empty">Please enter name on card</string>
+    <string name="error_card_number_invalid">Please enter valid card number (16 digits)</string>
+    <string name="error_cvc_invalid">Please enter valid CVC (3 digits)</string>
+    <string name="error_expiration_date_empty">Please enter expiration date</string>
+    <string name="error_zip_empty">Please enter zip code</string>
+    <string name="wallet_added_success">Wallet added successfully</string>
 
     <string-array name="languages">
         <item>English</item>
@@ -58,6 +129,5 @@
         <item>Zulu</item>
         <item>Xhosa</item>
     </string-array>
-
 
 </resources>

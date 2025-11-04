@@ -9,8 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="Enter your monthly budget"
-        android:textSize="16sp" />
+        android:text="@string/enter_monthly_budget"
+        android:textSize="16sp"
+        android:textColor="@color/colorTextPrimary" />
 
     <EditText
         android:id="@+id/etBudget"
@@ -19,9 +20,10 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/edit_text_background"
         android:fontFamily="@font/poppins_medium"
-        android:hint="Budget Amount"
+        android:hint="@string/budget_amount"
         android:inputType="numberDecimal"
         android:padding="16dp"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textColor="@color/colorTextPrimary" />
 
 </LinearLayout>

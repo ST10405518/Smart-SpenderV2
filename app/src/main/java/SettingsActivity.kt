@@ -1,11 +1,13 @@
 package com.example.SmartSpender
 
 import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import java.util.*
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -17,14 +19,16 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var btnSaveSettings: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Apply saved language and theme first
+        applySavedLocale()
+        applySavedLocale()
 
-        // Apply dark mode before setting content view
         applyDarkMode()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        // Initialize views
+        // Initialize UI components
         switchDarkMode = findViewById(R.id.switchDarkMode)
         etUsername = findViewById(R.id.etUsername)
         etEmail = findViewById(R.id.etEmail)
@@ -32,62 +36,66 @@ class SettingsActivity : AppCompatActivity() {
         spinnerLanguage = findViewById(R.id.spinnerLanguage)
         btnSaveSettings = findViewById(R.id.btnSaveSettings)
 
-        // Load saved settings
+        // Load preferences
         loadSettings()
 
-        // Dark mode toggle listener
+        // Dark Mode toggle listener
         switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
             toggleDarkMode(isChecked)
         }
 
-        // Save settings button
+        // Save button listener
         btnSaveSettings.setOnClickListener {
             saveSettings()
         }
     }
 
+    // ---------------------------
+// DARK MODE
+// ---------------------------
     private fun applyDarkMode() {
-        val sharedPreferences = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
-        val nightMode = sharedPreferences.getBoolean("nightMode", false)
-        if (nightMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        }
+        val sharedPref = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
+        val nightMode = sharedPref.getBoolean("nightMode", false)
+        AppCompatDelegate.setDefaultNightMode(
+            if (nightMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        )
     }
 
     private fun toggleDarkMode(enable: Boolean) {
-        val sharedPreferences = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-
-        if (enable) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            Toast.makeText(this, "Dark Mode Enabled", Toast.LENGTH_SHORT).show()
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            Toast.makeText(this, "Light Mode Enabled", Toast.LENGTH_SHORT).show()
+        val sharedPref = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
+        with(sharedPref.edit()) {
+            putBoolean("nightMode", enable)
+            apply()
         }
 
-        editor.putBoolean("nightMode", enable)
-        editor.apply()
+        AppCompatDelegate.setDefaultNightMode(
+            if (enable) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        )
 
-        // Restart activity to apply theme
-        recreate()
+        Toast.makeText(
+            this,
+            if (enable) getString(R.string.dark_mode_enabled) else getString(R.string.light_mode_enabled),
+            Toast.LENGTH_SHORT
+        ).show()
+
+        recreate() // Refresh UI
     }
 
+    // ---------------------------
+// LOAD & SAVE SETTINGS
+// ---------------------------
     private fun loadSettings() {
         val sharedPref = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
 
         // Dark Mode
         switchDarkMode.isChecked = sharedPref.getBoolean("nightMode", false)
 
-        // User info
+        // User details
         etUsername.setText(sharedPref.getString("username", ""))
         etEmail.setText(sharedPref.getString("email", ""))
         etPhone.setText(sharedPref.getString("phone", ""))
 
         // Language spinner
-        val language = sharedPref.getString("language", "English")
         val adapter = ArrayAdapter.createFromResource(
             this,
             R.array.languages,
@@ -96,7 +104,8 @@ class SettingsActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerLanguage.adapter = adapter
 
-        val position = adapter.getPosition(language).takeIf { it >= 0 } ?: 0
+        val savedLang = sharedPref.getString("language", "English")
+        val position = adapter.getPosition(savedLang).takeIf { it >= 0 } ?: 0
         spinnerLanguage.setSelection(position)
     }
 
@@ -106,20 +115,19 @@ class SettingsActivity : AppCompatActivity() {
         val phone = etPhone.text.toString().trim()
         val language = spinnerLanguage.selectedItem.toString()
 
-        // Validate inputs
+        // Validation
         if (username.isEmpty()) {
-            etUsername.error = "Username cannot be empty"
+            etUsername.error = getString(R.string.error_username_empty)
             etUsername.requestFocus()
             return
         }
-
         if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            etEmail.error = "Enter a valid email"
+            etEmail.error = getString(R.string.error_email_invalid)
             etEmail.requestFocus()
             return
         }
 
-        // Save to SharedPreferences
+        // Save settings
         val sharedPref = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
         with(sharedPref.edit()) {
             putString("username", username)
@@ -129,7 +137,45 @@ class SettingsActivity : AppCompatActivity() {
             apply()
         }
 
-        Toast.makeText(this, "Settings Saved", Toast.LENGTH_SHORT).show()
-        finish() // close activity so ProfileActivity refreshes on resume
+        // Apply language immediately
+        val langCode = when (language) {
+            "Zulu" -> "zu"
+            "Afrikaans" -> "af"
+            "Xhosa" -> "xh"
+            "Tshivenda" -> "ve"
+            else -> "en"
+        }
+        applyLocale(langCode)
+
+        Toast.makeText(this, getString(R.string.settings_saved), Toast.LENGTH_SHORT).show()
+        recreate()
     }
+
+    // ---------------------------
+// LANGUAGE HANDLING
+// ---------------------------
+    private fun applyLocale(langCode: String) {
+        val locale = Locale(langCode)
+        Locale.setDefault(locale)
+        val config = Configuration(resources.configuration)
+        config.setLocale(locale)
+
+        // Update app context
+        @Suppress("DEPRECATION")
+        resources.updateConfiguration(config, resources.displayMetrics)
+
+        // Save code
+        val sharedPref = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
+        with(sharedPref.edit()) {
+            putString("language_code", langCode)
+            apply()
+        }
+    }
+
+    private fun applySavedLocale() {
+        val sharedPref = getSharedPreferences("SmartSpenderPrefs", Context.MODE_PRIVATE)
+        val lang = sharedPref.getString("language_code", "en") ?: "en"
+        applyLocale(lang)
+    }
+
 }

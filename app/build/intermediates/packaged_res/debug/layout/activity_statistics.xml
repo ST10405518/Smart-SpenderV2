@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/poppins_bold"
-                android:text="SmartSpender"
+                android:text="@string/app_name"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -51,7 +51,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Statistics"
+            android:text="@string/statistics"
             android:textColor="@color/colorText"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -91,12 +91,12 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Monthly Spending" />
+                android:text="@string/monthly_spending" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category Breakdown" />
+                android:text="@string/category_breakdown" />
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -138,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="No data available for selected period"
+                    android:text="@string/no_data_available"
                     android:textColor="@color/colorTextSecondary"
                     android:textSize="16sp"
                     android:visibility="gone" />
@@ -165,7 +165,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Select Date Range"
+                android:text="@string/select_date_range"
                 android:textColor="@color/colorText"
                 android:textSize="16sp" />
 
@@ -186,7 +186,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Start Date"
+                        android:text="@string/start_date"
                         android:textColor="@color/colorTextSecondary"
                         android:textSize="14sp" />
 
@@ -215,7 +215,7 @@
                             android:minWidth="0dp"
                             android:paddingStart="12dp"
                             android:paddingEnd="12dp"
-                            android:text="Select"
+                            android:text="@string/select"
                             android:textAllCaps="false"
                             android:textColor="@color/colorButtonText"
                             android:textSize="12sp" />
@@ -233,7 +233,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="End Date"
+                        android:text="@string/end_date"
                         android:textColor="@color/colorTextSecondary"
                         android:textSize="14sp" />
 
@@ -262,7 +262,7 @@
                             android:minWidth="0dp"
                             android:paddingStart="12dp"
                             android:paddingEnd="12dp"
-                            android:text="Select"
+                            android:text="@string/select"
                             android:textAllCaps="false"
                             android:textColor="@color/colorButtonText"
                             android:textSize="12sp" />
@@ -277,7 +277,7 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/button_background"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Apply Filter"
+                android:text="@string/apply_filter"
                 android:textAllCaps="false"
                 android:textColor="@color/colorButtonText" />
         </LinearLayout>
@@ -322,7 +322,7 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_bold"
-                        android:text="Your Journey"
+                        android:text="@string/your_journey"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
@@ -336,7 +336,7 @@
                         android:paddingTop="6dp"
                         android:paddingEnd="16dp"
                         android:paddingBottom="6dp"
-                        android:text="Novice"
+                        android:text="@string/novice"
                         android:textColor="@color/white"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -359,7 +359,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="@font/poppins_bold"
-                            android:text="Level 1"
+                            android:text="@string/level_1"
                             android:textColor="@color/white"
                             android:textSize="18sp" />
 
@@ -368,7 +368,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="0/50 XP"
+                            android:text="@string/xp_0_50"
                             android:textColor="@color/colorTextSecondary"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -421,7 +421,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="Day Streak"
+                            android:text="@string/day_streak"
                             android:textColor="@color/colorTextSecondary"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -454,7 +454,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="Badges"
+                            android:text="@string/badges"
                             android:textColor="@color/colorTextSecondary"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -487,7 +487,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="Goal Progress"
+                            android:text="@string/goal_progress"
                             android:textColor="@color/colorTextSecondary"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -522,7 +522,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_bold"
-                            android:text="Achievement Unlocked!"
+                            android:text="@string/achievement_unlocked"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
 
@@ -531,7 +531,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="Complete your first transaction to unlock achievements!"
+                            android:text="@string/complete_first_transaction"
                             android:textColor="@color/colorTextSecondary"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -548,7 +548,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Recent Transactions"
+            android:text="@string/recent_transactions"
             android:textColor="@color/colorText"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"

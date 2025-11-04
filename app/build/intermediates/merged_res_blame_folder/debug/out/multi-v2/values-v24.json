@@ -4,7 +4,7 @@
             "outputFile": "com.example.SmartSpender.app-mergeDebugResources-52:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RC_Student_Lab\\.gradle\\caches\\transforms-3\\265e5b36cb28a8997fde6a532e08e4cf\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\RC_Student_Lab\\.gradle\\caches\\9.0-milestone-1\\transforms\\10f8cea907ad36e0ed645cbbac20b62f\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\RC_Student_Lab\\.gradle\\caches\\transforms-3\\da53094c505d872acd35098b88e2e6d6\\transformed\\material-1.10.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\RC_Student_Lab\\.gradle\\caches\\9.0-milestone-1\\transforms\\5489789edcb83378558ecb16b12548ea\\transformed\\material-1.10.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",

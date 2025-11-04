@@ -2,19 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_profile"
-        android:title="Profile" />
+        android:title="@string/profile" />
     <item
         android:id="@+id/menu_settings"
-        android:title="Settings" />
+        android:title="@string/settings" />
     <item
         android:id="@+id/menu_expense_report"
-        android:title="Expense Report" />
-
+        android:title="@string/expense_report" />
     <item
         android:id="@+id/menu_dark_mode"
-        android:title="Dark Mode" />
-
+        android:title="@string/dark_mode" />
     <item
         android:id="@+id/menu_logout"
-        android:title="Logout" />
+        android:title="@string/logout" />
 </menu>

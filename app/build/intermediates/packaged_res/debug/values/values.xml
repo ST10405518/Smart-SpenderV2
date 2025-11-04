@@ -73,6 +73,7 @@
     <color name="unselected_nav_item">#757575</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FDD835</color>
+    <string name="achievement_unlocked">Achievement Unlocked!</string>
     <string name="add">Add</string>
     <string name="add_expense">Add Expense</string>
     <string name="add_icon">Add Icon</string>
@@ -80,37 +81,89 @@
     <string name="add_wallet">Add Wallet</string>
     <string name="added_fund">You Added fund R%1$s</string>
     <string name="amount">Amount</string>
+    <string name="app_language">App Language</string>
     <string name="app_name">SmartSpender</string>
-    <string name="appname">DarkModeExample</string>
+    <string name="apply_filter">Apply Filter</string>
+    <string name="back">Back</string>
+    <string name="badges">Badges</string>
     <string name="balance">Balance</string>
+    <string name="budget_amount">Budget Amount</string>
+    <string name="cancel">Cancel</string>
     <string name="card_number">Card Number</string>
+    <string name="category_breakdown">Category Breakdown</string>
+    <string name="complete_first_transaction">Complete your first transaction to unlock achievements!</string>
     <string name="cvc">CVC</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="dark_mode_enabled">Dark Mode Enabled</string>
+    <string name="date">Date</string>
     <string name="date_of_birth">Date of Birth</string>
+    <string name="day_streak">Day Streak</string>
     <string name="delete">Delete</string>
     <string name="discard">Discard</string>
     <string name="edit">Edit</string>
     <string name="edit_wallet">Edit Wallet</string>
     <string name="email">Email</string>
+    <string name="end_date">End Date</string>
+    <string name="end_time">End Time</string>
+    <string name="enter_amount_to_add">Enter amount to add</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="enter_monthly_budget">Enter your monthly budget</string>
+    <string name="enter_phone">Enter your phone number</string>
+    <string name="enter_username">Enter your username</string>
+    <string name="error_card_number_invalid">Please enter valid card number (16 digits)</string>
+    <string name="error_cvc_invalid">Please enter valid CVC (3 digits)</string>
+    <string name="error_email_invalid">Enter a valid email</string>
+    <string name="error_expiration_date_empty">Please enter expiration date</string>
+    <string name="error_name_empty">Please enter name on card</string>
+    <string name="error_username_empty">Username cannot be empty</string>
+    <string name="error_zip_empty">Please enter zip code</string>
     <string name="expense_category">Expense Category</string>
     <string name="expense_name">Expense Name</string>
+    <string name="expense_receipt_images">Expense Receipt Images</string>
+    <string name="expense_report">Expense Report</string>
+    <string name="expenses">Expenses</string>
     <string name="expiration_date">Expiration Date</string>
     <string name="full_name">Full Name</string>
     <string name="gcm_defaultSenderId" translatable="false">46478644171</string>
+    <string name="general">General</string>
+    <string name="generate_report">Generate Report</string>
     <string name="get_started">Get Started</string>
+    <string name="goal_progress">Goal Progress</string>
     <string name="google_api_key" translatable="false">AIzaSyCLOIjzQPvR8VXKF3Va_eb4WE2gq63W8b0</string>
     <string name="google_app_id" translatable="false">1:46478644171:android:c93a0fa6ec0b4586041c4e</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCLOIjzQPvR8VXKF3Va_eb4WE2gq63W8b0</string>
     <string name="google_storage_bucket" translatable="false">smartspenderv2.firebasestorage.app</string>
     <string name="history">History</string>
+    <string name="income">Income</string>
+    <string name="level_1">Level 1</string>
+    <string name="light_mode_enabled">Light Mode Enabled</string>
     <string name="login">Log In</string>
+    <string name="logout">Logout</string>
     <string name="mobile_number">Mobile Number</string>
+    <string name="monthly_spending">Monthly Spending</string>
     <string name="name_on_card">Name on Card</string>
+    <string name="no_data_available">No data available for selected period</string>
     <string name="notification">Notification</string>
+    <string name="novice">Novice</string>
     <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="profile">Profile</string>
     <string name="project_id" translatable="false">smartspenderv2</string>
+    <string name="r_xxxx">R XXXX</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="security">Security</string>
+    <string name="security_settings_placeholder">Security settings will go here.</string>
+    <string name="select">Select</string>
+    <string name="select_date_range">Select Date Range</string>
+    <string name="settings">Settings</string>
+    <string name="settings_saved">Settings Saved</string>
     <string name="signup">Sign Up</string>
+    <string name="smartspender">SmartSpender</string>
     <string name="spending_limit_reached">You have reached R%1$s spending.</string>
     <string name="spendings">Spendings</string>
+    <string name="start_date">Start Date</string>
+    <string name="start_time">Start Time</string>
     <string name="statistics">Statistics</string>
     <string name="terms_policy">By continuing, you agree to Terms of Use and Privacy Policy.</string>
     <string name="title_add">Add</string>
@@ -119,9 +172,16 @@
     <string name="title_stats">Statistics</string>
     <string name="title_wallet">Wallet</string>
     <string name="today">Today</string>
+    <string name="total_expenses">Total Expenses: %s</string>
+    <string name="total_expenses_r_0_00">Total Expenses: R 0.00</string>
     <string name="total_spent">Total spent</string>
+    <string name="username">Username</string>
+    <string name="wallet_added_success">Wallet added successfully</string>
+    <string name="xp_0_50">0/50 XP</string>
+    <string name="xxxx">XXXX</string>
     <string name="yesterday">Yesterday</string>
     <string name="your_card_details">Your Card Details</string>
+    <string name="your_journey">Your Journey</string>
     <string name="zip">Zip</string>
     <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         

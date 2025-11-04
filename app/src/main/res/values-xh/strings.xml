@@ -1,0 +1,129 @@
+<resources>
+
+    ```
+    <string name="app_name">SmartSpender</string>
+    <string name="title_home">Ikhaya</string>
+    <string name="title_stats">Izibalo</string>
+    <string name="title_add">Yongeza</string>
+    <string name="title_wallet">Isikhwama</string>
+    <string name="title_notifications">Izaziso</string>
+
+    <string name="login">Ngena</string>
+    <string name="signup">Bhalisa</string>
+    <string name="email">Imeyile</string>
+    <string name="password">Iphasiwedi</string>
+    <string name="full_name">Igama Elipheleleyo</string>
+    <string name="mobile_number">Inombolo yeFowuni</string>
+    <string name="date_of_birth">Umhla Wokuzalwa</string>
+    <string name="terms_policy">Ngokuqhubeka, uyavuma iiMigomo yoSetyenziso kunye neNqubomgomo yoBucala.</string>
+    <string name="get_started">Qala</string>
+
+    <string name="add_expense">Yongeza iNkcitho</string>
+    <string name="add_wallet">Yongeza iSikhwama</string>
+    <string name="edit_wallet">Hlela iSikhwama</string>
+    <string name="add_icon">Yongeza uphawu</string>
+    <string name="add_photo">Yongeza iFoto</string>
+    <string name="expense_name">Igama leNkcitho</string>
+    <string name="expense_category">Udidi lweNkcitho</string>
+    <string name="amount">Ixabiso</string>
+    <string name="add">Yongeza</string>
+    <string name="edit">Hlela</string>
+    <string name="delete">Cima</string>
+    <string name="discard">Sulahla</string>
+
+    <string name="name_on_card">Igama kwiKhadi</string>
+    <string name="card_number">Inombolo yeKhadi</string>
+    <string name="cvc">CVC</string>
+    <string name="expiration_date">Umhla wokuphelelwa lixesha</string>
+    <string name="zip">Ikhowudi ye-Posi</string>
+    <string name="balance">Ibhalansi</string>
+    <string name="your_card_details">Iinkcukacha zeKhadi lakho</string>
+
+    <string name="statistics">Izibalo</string>
+    <string name="history">Imbali</string>
+    <string name="today">Namhlanje</string>
+    <string name="yesterday">Izolo</string>
+    <string name="spendings">Ukusetyenziswa</string>
+    <string name="total_spent">Iyonke esetyenzisiweyo</string>
+
+    <string name="settings_saved">Izicwangciso zigcinwe</string>
+    <string name="dark_mode_enabled">Imowudi emnyama ivuliwe</string>
+    <string name="light_mode_enabled">Imowudi ekhanyayo ivuliwe</string>
+    <string name="error_username_empty">Igama lomsebenzisi alinakuba lingenanto</string>
+    <string name="error_email_invalid">Faka i-imeyile esebenzayo</string>
+
+    <string name="notification">Isaziso</string>
+    <string name="spending_limit_reached">Ufikelele kwimida ye-R%1$s yokusetyenziswa.</string>
+    <string name="added_fund">Ufakile i-R%1$s</string>
+
+    <string name="smartspender">SmartSpender</string>
+    <string name="date">Umhla</string>
+    <string name="start_time">Ixesha lokuQala</string>
+    <string name="end_time">Ixesha lokuPhela</string>
+    <string name="expense_receipt_images">Imifanekiso yeNkcitho</string>
+    <string name="cancel">Rhoxisa</string>
+    <string name="app_language">Ulwimi loMsebenzi</string>
+    <string name="save_settings">Gcina izicwangciso</string>
+    <string name="settings">Izicwangciso</string>
+    <string name="dark_mode">Imowudi emnyama</string>
+    <string name="username">Igama lomsebenzisi</string>
+    <string name="enter_username">Faka igama lakho lomsebenzisi</string>
+    <string name="enter_email">Faka i-imeyile yakho</string>
+    <string name="phone_number">Inombolo yeFowuni</string>
+    <string name="enter_phone">Faka inombolo yakho yeFowuni</string>
+
+    <string name="back">Buyela</string>
+    <string name="profile">Iprofayile</string>
+    <string name="income">Ingeniso</string>
+    <string name="expenses">Iinkcitho</string>
+    <string name="general">Jikelele</string>
+    <string name="security">Ukhuseleko</string>
+    <string name="expense_report">Ingxelo yeNkcitho</string>
+    <string name="logout">Phuma</string>
+    <string name="generate_report">Velisa Ingxelo</string>
+    <string name="total_expenses">Iinkcitho Ezizonke: %s</string>
+    <string name="total_expenses_r_0_00">Iinkcitho Ezizonke: R 0.00</string>
+    <string name="security_settings_placeholder">Izicwangciso zokhuseleko ziya kuba apha.</string>
+
+    <string name="monthly_spending">Ukusetyenziswa Kwenyanga</string>
+    <string name="category_breakdown">Uhlalutyo LweeKhathegori</string>
+    <string name="no_data_available">Akukho datha ifumanekayo kule nkalo</string>
+    <string name="select_date_range">Khetha Uluhlu loMhla</string>
+    <string name="start_date">Umhla wokuqala</string>
+    <string name="end_date">Umhla wokuphela</string>
+    <string name="select">Khetha</string>
+    <string name="apply_filter">Sebenzisa Isihluzi</string>
+    <string name="your_journey">Uhambo lwakho</string>
+    <string name="novice">Umqalisi</string>
+    <string name="level_1">Inqanaba 1</string>
+    <string name="xp_0_50">0/50 XP</string>
+    <string name="day_streak">Umlandelelo Weentsuku</string>
+    <string name="badges">IiBhajhi</string>
+    <string name="goal_progress">Inkqubela Yeqonga</string>
+    <string name="achievement_unlocked">Impumelelo Ivuliwe!</string>
+    <string name="complete_first_transaction">Gqibezela ukuthengiselana kwakho kokuqala ukuze uvule impumelelo!</string>
+    <string name="recent_transactions">Uthengiselwano lwamva nje</string>
+
+    <string name="enter_amount_to_add">Faka isixa sokongeza</string>
+    <string name="enter_monthly_budget">Faka uhlahlo lwabiwo-mali lwakho lwenyanga</string>
+    <string name="budget_amount">Isixa soHlahlo lwabiwo-mali</string>
+
+    <string name="xxxx">XXXX</string>
+    <string name="r_xxxx">R XXXX</string>
+
+    <string name="error_name_empty">Nceda faka igama kwiKhadi</string>
+    <string name="error_card_number_invalid">Nceda faka inombolo yekhadi esebenzayo (16 amanani)</string>
+    <string name="error_cvc_invalid">Nceda faka iCVC esebenzayo (3 amanani)</string>
+    <string name="error_expiration_date_empty">Nceda faka umhla wokuphelelwa lixesha</string>
+    <string name="error_zip_empty">Nceda faka ikhowudi yeposi</string>
+    <string name="wallet_added_success">Isikhwama songezwe ngempumelelo</string>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Afrikaans</item>
+        <item>Zulu</item>
+        <item>Xhosa</item>
+    </string-array>
+
+
+</resources>
