@@ -189,6 +189,7 @@ SmartSpender/
 <img width="449" alt="graph: dark " src="https://github.com/user-attachments/assets/9fbdea13-e644-4281-a9bb-6484c8533e7b" />
 <img width="420" alt="smart Pulse: Light" src="https://github.com/user-attachments/assets/39f541b3-8367-497b-86a9-97b7fd509a18" />
 <img width="450" alt="Smart Pulse: dark" src="https://github.com/user-attachments/assets/5539f335-4bff-4551-8afe-4521ebbc8aa8" />
+![Uploading Screenshot 2025-11-04 at 16.13.37.png…]()
 
 
 
