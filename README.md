@@ -72,6 +72,14 @@ SmartSpender now includes **gamification features** to make budgeting fun, rewar
 **Why?**
 Because research shows people are more likely to stick to good financial habits if the experience is enjoyable and they feel rewarded.
 
+### 🌍 Multi-Language Support (NEW)
+SmartSpender is now multilingual, allowing users to experience the app in English, isiZulu, or Afrikaans.
+Users can switch languages anytime from the app settings.
+All interface elements, notifications, and feedback messages automatically update to the selected language.
+
+**Why it matters:**
+This enhancement makes the app more inclusive and accessible to South African users who prefer managing their finances in their home language — helping bridge the digital language gap.
+
 
 #### 🏅 Badges System
 
