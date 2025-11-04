@@ -1,0 +1,129 @@
+<resources>
+
+    ```
+    <string name="app_name">SlimSpender</string>
+    <string name="title_home">Tuis</string>
+    <string name="title_stats">Statistieke</string>
+    <string name="title_add">Voeg by</string>
+    <string name="title_wallet">Beursie</string>
+    <string name="title_notifications">Kennisgewings</string>
+
+    <string name="login">Teken in</string>
+    <string name="signup">Teken aan</string>
+    <string name="email">E-pos</string>
+    <string name="password">Wagwoord</string>
+    <string name="full_name">Volle Naam</string>
+    <string name="mobile_number">Selfoonnommer</string>
+    <string name="date_of_birth">Geboortedatum</string>
+    <string name="terms_policy">Deur voort te gaan, stem jy in met die Gebruiksvoorwaardes en Privaatheidsbeleid.</string>
+    <string name="get_started">Begin</string>
+
+    <string name="add_expense">Voeg Uitgawe by</string>
+    <string name="add_wallet">Voeg Beursie by</string>
+    <string name="edit_wallet">Wysig Beursie</string>
+    <string name="add_icon">Voeg Ikon by</string>
+    <string name="add_photo">Voeg Foto by</string>
+    <string name="expense_name">Naam van Uitgawe</string>
+    <string name="expense_category">Kategorie van Uitgawe</string>
+    <string name="amount">Bedrag</string>
+    <string name="add">Voeg by</string>
+    <string name="edit">Wysig</string>
+    <string name="delete">Verwyder</string>
+    <string name="discard">Gooi weg</string>
+
+    <string name="name_on_card">Naam op Kaart</string>
+    <string name="card_number">Kaartnommer</string>
+    <string name="cvc">CVC</string>
+    <string name="expiration_date">Vervaldatum</string>
+    <string name="zip">Poskode</string>
+    <string name="balance">Balans</string>
+    <string name="your_card_details">Jou Kaartbesonderhede</string>
+
+    <string name="statistics">Statistieke</string>
+    <string name="history">Geskiedenis</string>
+    <string name="today">Vandag</string>
+    <string name="yesterday">Gister</string>
+    <string name="spendings">Uitgawes</string>
+    <string name="total_spent">Totale bestee</string>
+
+    <string name="settings_saved">Instellings gestoor</string>
+    <string name="dark_mode_enabled">Donker Modus geaktiveer</string>
+    <string name="light_mode_enabled">Ligte Modus geaktiveer</string>
+    <string name="error_username_empty">Gebruikersnaam kan nie leeg wees nie</string>
+    <string name="error_email_invalid">Voer ’n geldige e-pos in</string>
+
+    <string name="notification">Kennisgewing</string>
+    <string name="spending_limit_reached">Jy het jou R%1$s bestee-limiet bereik.</string>
+    <string name="added_fund">Jy het R%1$s bygevoeg</string>
+
+    <string name="smartspender">SlimSpender</string>
+    <string name="date">Datum</string>
+    <string name="start_time">Begin Tyd</string>
+    <string name="end_time">Eind Tyd</string>
+    <string name="expense_receipt_images">Uitgawe Kwitansie Beelde</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="app_language">Taal van App</string>
+    <string name="save_settings">Stoor Instellings</string>
+    <string name="settings">Instellings</string>
+    <string name="dark_mode">Donker Modus</string>
+    <string name="username">Gebruikersnaam</string>
+    <string name="enter_username">Voer jou gebruikersnaam in</string>
+    <string name="enter_email">Voer jou e-pos in</string>
+    <string name="phone_number">Selfoonnommer</string>
+    <string name="enter_phone">Voer jou selfoonnommer in</string>
+
+    <string name="back">Terug</string>
+    <string name="profile">Profiel</string>
+    <string name="income">Inkomste</string>
+    <string name="expenses">Uitgawes</string>
+    <string name="general">Algemeen</string>
+    <string name="security">Sekuriteit</string>
+    <string name="expense_report">Uitgawe Verslag</string>
+    <string name="logout">Teken uit</string>
+    <string name="generate_report">Genereer Verslag</string>
+    <string name="total_expenses">Totale Uitgawes: %s</string>
+    <string name="total_expenses_r_0_00">Totale Uitgawes: R 0.00</string>
+    <string name="security_settings_placeholder">Sekuriteit instellings sal hier wees.</string>
+
+    <string name="monthly_spending">Maandelikse Uitgawes</string>
+    <string name="category_breakdown">Kategorie Verderekening</string>
+    <string name="no_data_available">Geen data beskikbaar vir geselekteerde tydperk nie</string>
+    <string name="select_date_range">Kies Datumbereik</string>
+    <string name="start_date">Begin Datum</string>
+    <string name="end_date">Eind Datum</string>
+    <string name="select">Kies</string>
+    <string name="apply_filter">Pas Filter toe</string>
+    <string name="your_journey">Jou Reis</string>
+    <string name="novice">Beginner</string>
+    <string name="level_1">Vlak 1</string>
+    <string name="xp_0_50">0/50 XP</string>
+    <string name="day_streak">Dag Streak</string>
+    <string name="badges">Baddges</string>
+    <string name="goal_progress">Doelvoortgang</string>
+    <string name="achievement_unlocked">Prestasie Ontsluit!</string>
+    <string name="complete_first_transaction">Voltooi jou eerste transaksie om prestasies te ontsluit!</string>
+    <string name="recent_transactions">Onlangse Transaksies</string>
+
+    <string name="enter_amount_to_add">Voer bedrag in om by te voeg</string>
+    <string name="enter_monthly_budget">Voer jou maandelikse begroting in</string>
+    <string name="budget_amount">Begrotingsbedrag</string>
+
+    <string name="xxxx">XXXX</string>
+    <string name="r_xxxx">R XXXX</string>
+
+    <string name="error_name_empty">Voer asseblief die naam op die kaart in</string>
+    <string name="error_card_number_invalid">Voer asseblief ’n geldige kaartnommer in (16 syfers)</string>
+    <string name="error_cvc_invalid">Voer asseblief ’n geldige CVC in (3 syfers)</string>
+    <string name="error_expiration_date_empty">Voer asseblief vervaldatum in</string>
+    <string name="error_zip_empty">Voer asseblief poskode in</string>
+    <string name="wallet_added_success">Beursie suksesvol bygevoeg</string>
+
+    <string-array name="languages">
+        <item>Engels</item>
+        <item>Afrikaans</item>
+        <item>Zulu</item>
+        <item>Xhosa</item>
+    </string-array>
+    ```
+
+</resources>
